@@ -1,0 +1,24 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <!--<style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">-->
+        <!--&lt;!&ndash; Customize your theme here. &ndash;&gt;-->
+        <!--<item name="colorPrimary">@color/colorPrimary</item>-->
+        <!--<item name="colorPrimaryDark">@color/colorPrimaryDark</item>-->
+        <!--<item name="colorAccent">@color/colorAccent</item>-->
+    <!--</style>-->
+
+    <style name="AppTheme" parent="@style/GoogleNavigationDrawerTheme.Light">
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="windowActionBar">false</item>
+        <item name="colorPrimary">@color/accent_material_light</item>
+        <item name="colorAccent">@color/primary_material_light</item>
+    </style>
+
+    <style name="MainTheme" parent="@style/GoogleNavigationDrawerTheme.Light">
+        <item name="android:windowIsTranslucent">false</item>
+        <item name="windowActionBar">false</item>
+        <item name="colorPrimary">@color/accent_material_light</item>
+        <item name="colorAccent">@color/primary_material_light</item>
+    </style>
+</resources>

@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="300dp">
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/item_image"
+            android:layout_width="match_parent"
+            android:layout_height="240dp"
+            android:scaleType="centerInside"
+            fresco:failureImage="@mipmap/empty_photo"
+            fresco:progressBarImage="@anim/ic_loading" />
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:layout_width="match_parent"
+            android:layout_height="240dp"
+            android:scaleType="centerInside"
+            fresco:backgroundImage="@drawable/home_gradient_bg" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/item_image"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_marginRight="6dp"
+                android:src="@mipmap/ic_clock" />
+
+            <TextView
+                android:id="@+id/item_home_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2016-05-10"
+                android:textSize="@dimen/home_time_textsize" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:background="@android:color/transparent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/item_home_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="3dp"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:singleLine="true"
+                android:text="女神or女屌，马尾造型见分晓"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/home_itemuser_textsize" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginBottom="5dp">
+
+                <com.facebook.drawee.view.DraweeView
+                    android:id="@+id/user_avatar"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center_horizontal"
+                    android:scaleType="centerInside"
+                    fresco:failureImage="@mipmap/ic_no_avatar_img"
+                    fresco:placeholderImage="@mipmap/ic_no_avatar_img"
+                    fresco:roundAsCircle="true"
+                    fresco:roundingBorderColor="#b2ffffff"
+                    fresco:roundingBorderWidth="3dp" />
+
+                <TextView
+                    android:id="@+id/user_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_margin="2dp"
+                    android:text="美妆嘉人"
+                    android:textSize="@dimen/home_itemuserid_textsize" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <FrameLayout
+            android:id="@+id/blog_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/corners_label">
+
+            <TextView
+                android:id="@+id/blog_label_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:text="热门"
+                android:textSize="12sp"
+                android:textColor="#ffec1f64"/>
+        </FrameLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

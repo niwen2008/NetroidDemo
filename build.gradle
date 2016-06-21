@@ -1,0 +1,36 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 23
+    buildToolsVersion "23.0.3"
+
+    defaultConfig {
+        applicationId "com.mengy.netroiddemo"
+        minSdkVersion 15
+        targetSdkVersion 23
+        versionCode 1
+        versionName "1.0"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    android {
+        useLibrary 'org.apache.http.legacy'
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    testCompile 'junit:junit:4.12'
+    compile 'com.android.support:appcompat-v7:23.2.1'
+    compile files('libs/fastjson-1.1.40.jar')
+    compile files('libs/netroid-1.2.1.jar')
+    compile files('libs/gson-2.3.jar')
+    compile 'com.facebook.fresco:fresco:0.10.0'
+    compile files('libs/android-async-http-1.4.8.jar')
+    compile 'it.neokree:GoogleNavigationDrawer:0.6'
+}
